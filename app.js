@@ -24,9 +24,8 @@ const listingRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-const dbURL = process.env.ATLASDB_URL;
 async function main() {
-  await mongoose.connect(dbURL);
+  await mongoose.connect(process.env.ATLASDB_URL);
 }
 main().then(console.log("Connected to Mongoose  Succesfully.."));
 main().catch((Error) => console.log(Error));
@@ -37,7 +36,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 //CREATES THE SESSION STORE IN THE MONGO-DATABASE
 const store = MongoStore.create({
-  mongoUrl: dbURL,
+  mongoUrl: process.env.ATLASDB_URL,
   crypto: {
     secret: process.env.SECRET,
   },

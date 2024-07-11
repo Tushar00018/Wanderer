@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+}
+
+/*Navbar*/
+
+.navbar {
+  height: 5rem;
+}
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link {
+  color: #222 !important;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+}
+.ft-info-links {
+  width: 100%;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.ft-info-socialMedia i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.ft-info-socialMedia {
+  width: 100%;
+}
+.ft-info-links a {
+  text-decoration: none;
+  color: black;
+}
+.ft-info-links a:hover {
+  text-decoration: underline;
+}
+.ft-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+  padding: 0.5rem;
+}
+
+/*Index*/
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  box-shadow: 2px 2px 2px rgb(15, 15, 15) !important;
+}
+.card-body {
+  padding: 0px !important;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.anchor {
+  text-decoration: none;
+  color: black;
+}
+.cardd:hover {
+  opacity: 0.8;
+}
+
+/*show*/
+.show-img {
+  height: 40vh;
+}
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+/*review carc*/
+.review-card {
+  box-shadow: 2px 2px 2px black;
+}
+
+/* MAP */
+#map {
+  height: 400px;
+  width: 400px;
+}

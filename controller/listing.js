@@ -27,6 +27,8 @@ module.exports.createListing = async (req, res, next) => {
   newData.owner = req.user._id;
   let url = req.file.path;
   let filename = req.file.filename;
+  console.log(`url ${req.file.path}`);
+  console.log(`filename ${req.file.filename}`);
   newData.image = { url, filename };
   await newData.save().then((result) => console.log(result));
   req.flash("sucess", "New User Registered");

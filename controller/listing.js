@@ -15,12 +15,13 @@ module.exports.showList = async (req, res) => {
     .findById(id)
     .populate({ path: "review", populate: { path: "author" } })
     .populate("owner");
-  if (list.length == 0) {
-    req.flash("error", "Listing you requested for does not exists");
-    res.redirect("/listings");
-  }else{
- res.render("show.ejs", { list });
-  }
+   res.redirect("/listings");
+ //  if (list.length == 0) {
+ //    req.flash("error", "Listing you requested for does not exists");
+ //    res.redirect("/listings");
+ //  }else{
+ // res.render("show.ejs", { list });
+ //  }
 };
 //CREATE LISTING
 module.exports.createListing = async (req, res, next) => {

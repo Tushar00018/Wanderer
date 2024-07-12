@@ -36,7 +36,7 @@ const session = require("express-session");
 //STOREES THE SESSION RELATED DATA INTO THE ATLAS MONGOO
 const MongoStore = require("connect-mongo");
 //CREATES THE SESSION STORE IN THE MONGO-DATABASE
-
+console.log("mongo store");
 const store = MongoStore.create({
   mongoUrl: dbURL,
   crypto: {
@@ -44,7 +44,7 @@ const store = MongoStore.create({
   },
   touchAfter: 24 * 3600,
 });
-
+console.log("session");
 const sessioOptions = {
   store: store,
   secret: process.env.SECRET,

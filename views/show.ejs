@@ -25,13 +25,13 @@
   <div class="buttons mb-3 col-8 offset-2">
     <form
       method="get"
-      action="http://localhost:5050/listings/<%= list.id %>/edit"
+      action="/listings/<%= list.id %>/edit"
     >
       <button class="btn btn-success" type="submit">Edit</button>
     </form>
     <form
       method="post"
-      action="http://localhost:5050/listings/<%=list.id %>?_method=Delete"
+      action="/listings/<%=list.id %>?_method=Delete"
     >
       <button class="btn btn-danger" type="submit">Delete</button>
     </form>

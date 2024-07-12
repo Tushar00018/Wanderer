@@ -30,7 +30,7 @@ module.exports.createListing = async (req, res, next) => {
   newData.image = { url, filename };
   await newData.save().then((result) => console.log(result));
   req.flash("sucess", "New User Registered");
-  res.redirect("http://localhost:5050/listings");
+  res.redirect("/listings");
 };
 
 module.exports.renderEditForm = async (req, res) => {
